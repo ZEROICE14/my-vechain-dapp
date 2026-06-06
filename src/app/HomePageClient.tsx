@@ -51,7 +51,7 @@ export default function HomePageClient() {
           <Text color="#8b949e" fontSize="md" maxW="400px">Connect your wallet to view your B3TR balance and send tokens on the VeChain blockchain.</Text>
         </VStack>
 
-        {isConnecting ? (
+        {false ? (
           <Box bg="#161b22" border="1px solid #30363d" borderRadius="20px" p={8} w="full">
             <VStack gap={3}>
               <Spinner color="#00c2cb" size="lg" />
