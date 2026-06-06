@@ -22,7 +22,7 @@ function VeChainKitWrapper({ children }: { children: ReactNode }) {
   return (
     <VeChainKitProvider
       privy={{
-        appId: process.env.NEXT_PUBLIC_PRIVY_APP_ID ?? "",
+        appId: process.env.NEXT_PUBLIC_PRIVY_APP_ID ?? "cmplyjdm700r00bi8smpx7uzm",
         clientId: process.env.NEXT_PUBLIC_PRIVY_CLIENT_ID ?? "",
         loginMethods: ["google", "email"],
         appearance: {
