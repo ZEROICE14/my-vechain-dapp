@@ -23,7 +23,6 @@ function VeChainKitWrapper({ children }: { children: ReactNode }) {
     <VeChainKitProvider
       privy={{
         appId: process.env.NEXT_PUBLIC_PRIVY_APP_ID ?? "",
-        clientId: undefined,
         loginMethods: ["google", "email"],
         appearance: {
           walletList: ["detected_wallets"],
