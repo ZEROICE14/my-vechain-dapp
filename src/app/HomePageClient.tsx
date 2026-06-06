@@ -10,11 +10,13 @@ import {
   Spinner,
 } from "@chakra-ui/react";
 import { useWallet, WalletButton } from "@vechain/vechain-kit";
+import { usePrivy } from "@vechain/vechain-kit";
 import { useB3TRBalance } from "@/hooks/useB3TRBalance";
 import { SendB3TRModal } from "@/components/SendB3TRModal";
 
 export default function HomePageClient() {
   const { connectedWallet, connection } = useWallet();
+  const { logout } = usePrivy();
   const isConnected = connection?.isConnected ?? false;
   const address = connectedWallet?.address ?? "";
   const shortAddr = address
@@ -35,14 +37,26 @@ export default function HomePageClient() {
           <Box w="28px" h="28px" borderRadius="8px" bg="linear-gradient(135deg, #00c2cb, #2d8bff)" />
           <Text fontWeight="700" fontSize="sm" color="#e6edf3" letterSpacing="0.05em">my-vechain-dapp</Text>
         </HStack>
+
         {isConnected ? (
-  <HStack gap={3} bg="#161b22" border="1px solid #30363d" borderRadius="full" px={4} py={2}>
-    <Box w="8px" h="8px" borderRadius="full" bg="#00e676" />
-    <Text fontFamily="monospace" fontSize="xs" color="#8b949e">{shortAddr}</Text>
-  </HStack>
-) : (
-  <WalletButton />
-)}
+          <HStack gap={3}>
+            <HStack gap={2} bg="#161b22" border="1px solid #30363d" borderRadius="full" px={4} py={2}>
+              <Box w="8px" h="8px" borderRadius="full" bg="#00e676" />
+              <Text fontFamily="monospace" fontSize="xs" color="#8b949e">{shortAddr}</Text>
+            </HStack>
+            <Button
+              size="sm"
+              variant="ghost"
+              color="#8b949e"
+              _hover={{ color: "#ff6b6b" }}
+              onClick={logout}
+            >
+              Disconnect
+            </Button>
+          </HStack>
+        ) : (
+          <WalletButton />
+        )}
       </Box>
 
       <VStack gap={10} maxW="640px" w="full" textAlign="center" pt={16}>
