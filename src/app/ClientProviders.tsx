@@ -43,7 +43,7 @@ function VeChainKitWrapper({ children }: { children: ReactNode }) {
         { method: "email" },
       ]}  
       dappKit={{
-        allowedWallets: ["veworld", "walletconnect", "sync2"],
+        allowedWallets: ["veworld", "wallet-connect", "sync2"],
         walletConnectOptions: {
           projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID ?? "",
           metadata: {
