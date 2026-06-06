@@ -14,16 +14,16 @@ import { useB3TRBalance } from "@/hooks/useB3TRBalance";
 import { SendB3TRModal } from "@/components/SendB3TRModal";
 
 export default function HomePageClient() {
-  const { account, isConnected, isConnecting } = useWallet();
-  const { balance, isLoading: balanceLoading } = useB3TRBalance(
-    isConnected ? account?.address : undefined
-  );
-  const [sendOpen, setSendOpen] = useState(false);
-
-  const address = account?.address ?? "";
+  const { connectedWallet, connection } = useWallet();
+  const isConnected = connection?.isConnected ?? false;
+  const address = connectedWallet?.address ?? "";
   const shortAddr = address
     ? `${address.slice(0, 6)}...${address.slice(-4)}`
     : "";
+  const { balance, isLoading: balanceLoading } = useB3TRBalance(
+    isConnected ? address : undefined
+  );
+  const [sendOpen, setSendOpen] = useState(false);
 
   return (
     <Box minH="100vh" display="flex" flexDirection="column" alignItems="center" justifyContent="center" px={4} position="relative" overflow="hidden" bg="#0d1117">
