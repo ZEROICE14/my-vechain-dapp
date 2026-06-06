@@ -139,18 +139,13 @@ export function SendB3TRModal({
               >
                 {txId}
               </Text>
-              <Button
-                as="a"
-                href={`https://explore.vechain.org/transactions/${txId}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                size="sm"
-                variant="outline"
-                borderColor="#00c2cb"
-                color="#00c2cb"
-              >
-                View on Explorer ↗
-              </Button>
+              href={`https://explore.vechain.org/transactions/${txId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#00c2cb", fontSize: "14px" }}
+            > 
+              View on Explorer ↗
+            </a>
             </VStack>
           ) : (
             <>
