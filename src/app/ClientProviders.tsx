@@ -26,7 +26,6 @@ function VeChainKitWrapper({ children }: { children: ReactNode }) {
         loginMethods: ["google", "email"],
         appearance: {
           walletList: ["detected_wallets"],
-          theme: "dark",
         },
         embeddedWallets: {
           createOnLogin: "users-without-wallets",
