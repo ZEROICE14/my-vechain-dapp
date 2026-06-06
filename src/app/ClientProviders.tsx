@@ -41,7 +41,6 @@ function VeChainKitWrapper({ children }: { children: ReactNode }) {
        loginMethods={[
         { method: "google" },
         { method: "email" },
-        { method: "veworld" },
       ]}  
       dappKit={{
         allowedWallets: ["veworld", "walletconnect", "sync2"],
