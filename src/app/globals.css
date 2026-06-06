@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&display=swap');
+
+:root {
+  --font-space-mono: 'Space Mono', monospace;
+  --font-dm-sans: 'DM Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-dm-sans);
+  background: #0d1117;
+  color: #e6edf3;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #161b22;
+}
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 3px;
+}
+
+/* Glow keyframe for accent elements */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px 0px rgba(0, 194, 203, 0.4); }
+  50%       { box-shadow: 0 0 24px 4px rgba(0, 194, 203, 0.7); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glow-teal {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #00c2cb, #2d8bff, #00e676);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s ease infinite;
+}
+
+/* Grid background pattern */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 194, 203, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 194, 203, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+/* Fix VeChain Kit / Privy modal rendering */
+[data-privy-dialog],
+[data-privy-modal],
+privy-modal-content,
+.privy-dialog-content {
+  overflow: visible !important;
+}
+
+div[role="dialog"] {
+  overflow: visible !important;
+  max-height: none !important;
+}
