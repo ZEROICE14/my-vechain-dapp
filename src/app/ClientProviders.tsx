@@ -26,6 +26,8 @@ function VeChainKitWrapper({ children }: { children: ReactNode }) {
         loginMethods: ["google", "email"],
         appearance: {
           walletList: ["detected_wallets"],
+          loginMessage: "Welcome to my VeChain dApp",
+          logo: "https://avatars.githubusercontent.com/u/89985812",
         },
         embeddedWallets: {
           createOnLogin: "users-without-wallets",
