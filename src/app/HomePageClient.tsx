@@ -36,13 +36,13 @@ export default function HomePageClient() {
           <Text fontWeight="700" fontSize="sm" color="#e6edf3" letterSpacing="0.05em">my-vechain-dapp</Text>
         </HStack>
         {isConnected ? (
-          <HStack gap={3} bg="#161b22" border="1px solid #30363d" borderRadius="full" px={4} py={2}>
-            <Box w="8px" h="8px" borderRadius="full" bg="#00e676" />
-            <Text fontFamily="monospace" fontSize="xs" color="#8b949e">{shortAddr}</Text>
-          </HStack>
-        ) : (
-          <WalletButton />
-        )}
+  <HStack gap={3} bg="#161b22" border="1px solid #30363d" borderRadius="full" px={4} py={2}>
+    <Box w="8px" h="8px" borderRadius="full" bg="#00e676" />
+    <Text fontFamily="monospace" fontSize="xs" color="#8b949e">{shortAddr}</Text>
+  </HStack>
+) : (
+  <WalletButton />
+)}
       </Box>
 
       <VStack gap={10} maxW="640px" w="full" textAlign="center" pt={16}>
