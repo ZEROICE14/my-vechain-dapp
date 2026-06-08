@@ -28,14 +28,27 @@ export default function HomePageClient() {
   const [sendOpen, setSendOpen] = useState(false);
 
   return (
-    <Box minH="100vh" display="flex" flexDirection="column" alignItems="center" justifyContent="center" px={4} position="relative" overflow="hidden" bg="#0d1117">
+<Box
+  minH="100vh"
+  display="flex"
+  flexDirection="column"
+  alignItems="center"
+  justifyContent="center"
+  px={4}
+  position="relative"
+  overflow="hidden"
+  bgImage="url('https://images.unsplash.com/photo-1612806527197-42af2b64884a?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
+  bgSize="cover"
+  bgPosition="center"
+  bgRepeat="no-repeat"
+>
       <Box position="absolute" top="-20%" right="-10%" w="500px" h="500px" borderRadius="full" bg="radial-gradient(circle, rgba(0,194,203,0.08) 0%, transparent 70%)" pointerEvents="none" />
       <Box position="absolute" bottom="-15%" left="-10%" w="400px" h="400px" borderRadius="full" bg="radial-gradient(circle, rgba(45,139,255,0.08) 0%, transparent 70%)" pointerEvents="none" />
 
       <Box position="fixed" top={0} left={0} right={0} px={6} py={4} display="flex" alignItems="center" justifyContent="space-between" bg="rgba(13,17,23,0.8)" backdropFilter="blur(12px)" borderBottom="1px solid rgba(48,54,61,0.5)" zIndex={100}>
         <HStack gap={2} align="center">
           <Box w="28px" h="28px" borderRadius="8px" bg="linear-gradient(135deg, #00c2cb, #2d8bff)" />
-          <Text fontWeight="700" fontSize="sm" color="#e6edf3" letterSpacing="0.05em">my-vechain-dapp</Text>
+          <Text fontWeight="700" fontSize="sm" color="#e6edf3" letterSpacing="0.05em">GARDEN FRIENDS</Text>
         </HStack>
 
         {isConnected ? (
@@ -47,7 +60,7 @@ export default function HomePageClient() {
             <Button
               size="sm"
               variant="ghost"
-              color="#8b949e"
+              color="#e8eef5"
               _hover={{ color: "#ff6b6b" }}
               onClick={logout}
             >
@@ -61,26 +74,26 @@ export default function HomePageClient() {
 
       <VStack gap={10} maxW="640px" w="full" textAlign="center" pt={16}>
         <VStack gap={4}>
-          <Text fontWeight="700" fontSize="4xl" lineHeight={1.1} color="#00c2cb">VeChain dApp</Text>
-          <Text color="#8b949e" fontSize="md" maxW="400px">Connect your wallet to view your B3TR balance and send tokens on the VeChain blockchain.</Text>
+          <Text fontWeight="700" fontSize="4xl" lineHeight={1.1} color="#f5fbfc">GARDEN FRIENDS</Text>
+          <Text color="#e1e9f3" fontSize="md" maxW="400px">Vegetable gardening isn’t just about growing your own food – it also has a positive impact on the environment. From reducing carbon footprint to promoting biodiversity and sustainable living, vegetable gardens play a crucial role in creating a healthier planet.</Text>
         </VStack>
 
         {false ? (
           <Box bg="#161b22" border="1px solid #30363d" borderRadius="20px" p={8} w="full">
             <VStack gap={3}>
               <Spinner color="#00c2cb" size="lg" />
-              <Text color="#8b949e" fontSize="sm" fontFamily="monospace">Connecting...</Text>
+              <Text color="#eaf0f7" fontSize="sm" fontFamily="monospace">Connecting...</Text>
             </VStack>
           </Box>
         ) : isConnected ? (
           <Box bg="#161b22" border="1px solid #30363d" borderRadius="20px" p={8} w="full" boxShadow="0 0 40px rgba(0,194,203,0.08)">
             <VStack gap={6} align="stretch">
-              <Box bg="#0d1117" borderRadius="12px" p={4} border="1px solid #21262d">
-                <Text fontSize="xs" color="#8b949e" fontFamily="monospace" mb={1} textTransform="uppercase" letterSpacing="0.1em">Connected Address</Text>
+              <Box bg="#14532d" borderRadius="12px" p={4} border="1px solid #21262d">
+                <Text fontSize="xs" color="#e7edf4" fontFamily="monospace" mb={1} textTransform="uppercase" letterSpacing="0.1em">Connected Address</Text>
                 <Text fontFamily="monospace" fontSize="sm" color="#e6edf3" wordBreak="break-all">{address}</Text>
               </Box>
               <Box bg="linear-gradient(135deg, rgba(0,194,203,0.08), rgba(45,139,255,0.08))" borderRadius="16px" p={6} border="1px solid rgba(0,194,203,0.2)" textAlign="center">
-                <Text fontSize="xs" color="#8b949e" fontFamily="monospace" textTransform="uppercase" letterSpacing="0.12em" mb={2}>B3TR Balance</Text>
+                <Text fontSize="xs" color="#e3eaf1" fontFamily="monospace" textTransform="uppercase" letterSpacing="0.12em" mb={2}>B3TR Balance</Text>
                 {balanceLoading ? (
                   <Spinner color="#00c2cb" size="md" />
                 ) : (
