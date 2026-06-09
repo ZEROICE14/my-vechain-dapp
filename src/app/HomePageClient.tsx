@@ -38,7 +38,7 @@ export default function HomePageClient() {
   position="relative"
   overflow="hidden"
   style={{
-    backgroundImage: "url('https://images.unsplash.com/photo-1612806527197-42af2b64884a?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+    backgroundImage: "url('https://images.unsplash.com/photo-1534710961216-75c88202f43e?q=80&w=1288&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
