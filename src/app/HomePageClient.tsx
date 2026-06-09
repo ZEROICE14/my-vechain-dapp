@@ -37,10 +37,12 @@ export default function HomePageClient() {
   px={4}
   position="relative"
   overflow="hidden"
-  bgImage="url('https://images.unsplash.com/photo-1612806527197-42af2b64884a?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
-  bgSize="cover"
-  bgPosition="center"
-  bgRepeat="no-repeat"
+  style={{
+    backgroundImage: "url('https://images.unsplash.com/photo-1612806527197-42af2b64884a?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
 >
       <Box position="absolute" top="-20%" right="-10%" w="500px" h="500px" borderRadius="full" bg="radial-gradient(circle, rgba(0,194,203,0.08) 0%, transparent 70%)" pointerEvents="none" />
       <Box position="absolute" bottom="-15%" left="-10%" w="400px" h="400px" borderRadius="full" bg="radial-gradient(circle, rgba(45,139,255,0.08) 0%, transparent 70%)" pointerEvents="none" />
